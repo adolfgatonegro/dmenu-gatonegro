@@ -454,6 +454,10 @@ keypress(XKeyEvent *ev)
 		case XK_u: /* delete left */
 			insert(NULL, 0 - cursor);
 			break;
+		case XK_v: /* paste selection */
+			XConvertSelection(dpy, (ev->state & ShiftMask) ? clip : XA_PRIMARY,
+			                  utf8, utf8, win, CurrentTime);
+			return;
 		case XK_w: /* delete word */
 			while (cursor > 0 && strchr(worddelimiters, text[nextrune(-1)]))
 				insert(NULL, nextrune(-1) - cursor);
