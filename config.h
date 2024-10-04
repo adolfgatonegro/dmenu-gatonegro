@@ -6,7 +6,7 @@ static int opacity = 1;                     /* -o  option; if 0, then alpha is d
 static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"monospace:size=9",
+	"monospace:size=8",
 	"JoyPixels:pixelsize=11:antialias=true:autohint=true",
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
